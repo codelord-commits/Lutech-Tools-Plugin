@@ -1,6 +1,7 @@
 # Hướng dẫn cho người không biết code
 
 Bạn kể việc đang làm tay → Claude tự làm ra tool → bạn nhận file `.exe` dùng và gửi đồng nghiệp.
+n> Dùng AI cho các việc UA cụ thể (báo cáo, research, cảnh báo camp…): xem [HUONG-DAN-UA.md](HUONG-DAN-UA.md).
 Không cần biết lập trình, không cần gõ lệnh.
 
 ## Cài một lần (5 phút)

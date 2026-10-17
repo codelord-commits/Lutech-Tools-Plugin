@@ -17,7 +17,7 @@ KEY = f"{PLUGIN}@{MARKET}"
 
 
 def apply(settings: Path, uninstall: bool = False) -> None:
-    data = json.loads(settings.read_text(encoding="utf-8")) if settings.exists() else {}
+    data = json.loads(settings.read_text(encoding="utf-8-sig")) if settings.exists() else {}
     if not isinstance(data, dict):
         raise SystemExit(f"{settings} không phải JSON object — sửa tay hoặc gửi team kỹ thuật.")
     markets = data.setdefault("extraKnownMarketplaces", {})
@@ -30,7 +30,7 @@ def apply(settings: Path, uninstall: bool = False) -> None:
         enabled[KEY] = True
     settings.parent.mkdir(parents=True, exist_ok=True)
     if settings.exists():
-        settings.with_suffix(".json.bak").write_text(settings.read_text(encoding="utf-8"), encoding="utf-8")
+        settings.with_suffix(".json.bak").write_bytes(settings.read_bytes())
     tmp = settings.with_suffix(".json.tmp")
     tmp.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     tmp.replace(settings)

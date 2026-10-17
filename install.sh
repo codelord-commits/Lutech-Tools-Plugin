@@ -16,8 +16,17 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 say()  { printf '\033[1;34m==>\033[0m %s\n' "$*"; }
 die()  { printf '\033[1;31mLỗi:\033[0m %s\n' "$*" >&2; exit 1; }
 
-command -v claude >/dev/null 2>&1 || die "Không tìm thấy lệnh 'claude'. Cài Claude Code trước: https://docs.claude.com/claude-code
-  Hoặc cài thủ công trong Claude Code:  /plugin marketplace add $HERE   rồi   /plugin install $PLUGIN@$MARKET"
+if ! command -v claude >/dev/null 2>&1; then
+  # Chỉ có Claude Desktop (không có CLI): ghi thẳng ~/.claude/settings.json.
+  PY="$(command -v python3 || command -v python || true)"
+  [ -n "$PY" ] || die "Chưa có Python. Tải tại https://www.python.org/downloads/ rồi chạy lại."
+  [ -z "${1:-}" ] || [ "$1" = "--uninstall" ] || [ "$1" = "--update" ] || die "Cài từ GitHub cần lệnh claude. Tải zip, giải nén rồi chạy install trong đó."
+  say "Cài cho Claude Desktop"
+  if [ "${1:-}" = "--uninstall" ]; then "$PY" "$HERE/scripts/install_plugin.py" --uninstall
+  else "$PY" "$HERE/scripts/install_plugin.py"; fi
+  echo "Tắt hẳn Claude rồi mở lại, vào tab Code và gõ /lutech-tools:lam-tool"
+  exit 0
+fi
 
 case "${1:-}" in
   --update)
@@ -46,6 +55,6 @@ esac
 cat <<EOF
 
 ✓ Xong. Mở lại Claude Code rồi gõ:
-    /lutech-tools:help        xem toàn bộ lệnh và nên làm gì tiếp
-    /lutech-tools:new-tool    tạo tool mới từ template
+    /lutech-tools:lam-tool    rồi kể việc bạn muốn tự động hoá
+    /lutech-tools:help        xem tất cả lệnh
 EOF

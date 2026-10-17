@@ -17,8 +17,8 @@ Template nằm ngay trong plugin: `${CLAUDE_PLUGIN_ROOT}/scripts/new_project.py`
    | **Thư viện/lõi** | Code dùng lại ở dự án khác | Bỏ `web/` và `build/`; giữ `basetool/` + test; bỏ workflow release zip |
 
 2. Chạy: `python "<đường dẫn new_project.py>" "<đích>" --name "<Tên>"` (thêm `--package <ten>` nếu muốn tên package khác).
-3. Trong thư mục mới: `python -m venv .venv`, `.venv/Scripts/pip install -e .[dev]` (macOS/Linux: `.venv/bin/pip`),
-   rồi `python -m pytest -q -m "not ui"` — phải xanh. Nếu là Web UI: `python -m playwright install chromium` rồi chạy cả test UI.
+3. Trong thư mục mới: `python scripts/setup_env.py` (Web UI: thêm `--ui`), rồi chạy test bằng python trong `.venv`
+   (`.venv/Scripts/python -m pytest -q`, macOS/Linux `.venv/bin/python`) — phải xanh.
 4. Áp dụng phần dọn theo loại tool ở bảng trên (nếu không phải mặc định), chạy lại test.
 5. Nhắc người dùng: tạo `.privacy-blocklist` (tên khách, app khách, domain nội bộ — file bị gitignore), thêm icon
    `build/icon.ico` / `build/icon.icns`.

@@ -3,6 +3,8 @@
 Repo này vừa là **template** công cụ desktop local, vừa là **plugin** Claude Code đóng gói toàn bộ quy trình
 [LIFECYCLE](LIFECYCLE.md) thành lệnh `/lutech-tools:*` dùng được ở mọi dự án.
 
+> Người không biết code (UA, marketing…): đọc [HUONG-DAN.md](HUONG-DAN.md) — chỉ cần 3 lệnh.
+
 ## 1. Cài đặt (1 lệnh)
 
 Cần [Claude Code](https://docs.claude.com/claude-code) (lệnh `claude`) và Python ≥ 3.10.
@@ -18,15 +20,22 @@ git clone <url-repo> lutech-tools && cd lutech-tools && ./install.sh
 | Cập nhật | `./install.sh --update` |
 | Gỡ | `./install.sh --uninstall` |
 
-Windows: chạy trong **Git Bash**. Không có terminal? Trong Claude Code gõ
+Windows: double-click **`install.bat`**. macOS: double-click **`install.command`**. Linux/Git Bash: `./install.sh`. Không có terminal? Trong Claude Code gõ
 `/plugin marketplace add <đường-dẫn-repo>` rồi `/plugin install lutech-tools@lutech`.
 
-Kiểm tra: mở lại Claude Code, gõ `/lutech-tools:help`.
+Không có lệnh `claude` (chỉ cài **Claude Desktop**)? Installer tự chuyển sang `scripts/install_plugin.py`: ghi
+`extraKnownMarketplaces` + `enabledPlugins` vào `~/.claude/settings.json` (giữ nguyên cấu hình khác, có bản `.bak`).
+Plugin chạy từ thư mục repo — không di chuyển thư mục sau khi cài.
+
+Kiểm tra: Quit Claude Desktop, mở lại, vào tab **Code**, gõ `/lutech-tools:help`.
 
 ## 2. Danh sách lệnh
 
 | Lệnh | Giai đoạn | Làm gì | Đầu ra |
 |------|-----------|--------|--------|
+| `/lutech-tools:lam-tool` | 0→7 | **Cho non-tech**: kể việc bằng lời → Claude tự làm hết → tool chạy được | tool + file zip |
+| `/lutech-tools:sua-tool` | 8 | **Cho non-tech**: sửa lỗi / thêm tính năng bằng lời | tool đã cập nhật |
+| `/lutech-tools:dong-goi` | 6–7 | Đóng gói zip .exe/.app gửi đồng nghiệp, không cần GitHub | `dist/<App>-<os>.zip` |
 | `/lutech-tools:help` | — | Liệt kê lệnh, đoán giai đoạn hiện tại, gợi ý lệnh tiếp | — |
 | `/lutech-tools:new-tool` | 0 | Tạo dự án mới từ template, đổi tên, cài venv, chạy test | thư mục dự án + commit đầu |
 | `/lutech-tools:spec-feature` | 1–2 | Hỏi làm rõ, đề xuất hướng, viết spec + ADR | `docs/specs/…`, `docs/adr/…` |

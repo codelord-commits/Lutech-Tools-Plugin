@@ -24,7 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 IGNORE = shutil.ignore_patterns(".git", ".venv", "venv", "__pycache__", ".pytest_cache", ".ruff_cache", "*.egg-info",
                                 "dist", "out", ".privacy-blocklist", "settings.local.json", "launch.json",
                                 # Phần plugin lutech-tools — chỉ sống ở repo gốc.
-                                ".claude-plugin", "skills", "install.sh", "PLUGIN.md")
+                                ".claude-plugin", "skills", "install.sh", "install.ps1",
+                                "install.bat", "install.command", "install_plugin.py", "PLUGIN.md", "HUONG-DAN.md")
 TEXT_EXT = {".py", ".md", ".toml", ".txt", ".json", ".yml", ".yaml", ".html", ".css", ".js", ".spec", ".cfg", ".ini",
             ".sh", ".gitignore", ".gitattributes", ""}
 

@@ -7,6 +7,8 @@
       "Bash(.venv/bin/python -m pytest:*)",
       "Bash(ruff check:*)",
       "Bash(python scripts/check_privacy.py:*)",
+      "Bash(python scripts/setup_env.py:*)",
+      "Bash(python scripts/build_exe.py:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)"

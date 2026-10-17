@@ -7,11 +7,10 @@ Khung dự án cho **công cụ desktop chạy local**: lõi Python + CLI + giao
 
 ## Plugin Claude Code `lutech-tools`
 
-```bash
-./install.sh
-```
+Double-click **`install.bat`** (Windows) hoặc **`install.command`** (macOS) — hoặc `./install.sh`.
 
-Rồi trong Claude Code gõ `/lutech-tools:help`. Các lệnh: `new-tool`, `spec-feature`, `plan-feature`, `implement-tdd`,
+Không biết code? Đọc [docs/HUONG-DAN.md](docs/HUONG-DAN.md) và gõ `/lutech-tools:lam-tool`.
+Dev: gõ `/lutech-tools:help`. Các lệnh: `lam-tool`, `sua-tool`, `dong-goi` (cho non-tech), `new-tool`, `spec-feature`, `plan-feature`, `implement-tdd`,
 `review-change`, `ui-review`, `qa-check`, `release`, `help` — hướng dẫn theo từng loại tool ở [docs/PLUGIN.md](docs/PLUGIN.md).
 
 ## Dùng ngay (người dùng cuối)

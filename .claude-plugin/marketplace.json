@@ -1,0 +1,12 @@
+{
+  "name": "lutech",
+  "owner": { "name": "Lutech" },
+  "metadata": { "description": "Plugin nội bộ Lutech cho Claude Code" },
+  "plugins": [
+    {
+      "name": "lutech-tools",
+      "source": "./",
+      "description": "Quy trình đầy đủ từ ý tưởng đến release cho công cụ desktop local: /lutech-tools:new-tool, spec-feature, plan-feature, implement-tdd, review-change, ui-review, qa-check, release, help."
+    }
+  ]
+}

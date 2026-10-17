@@ -5,6 +5,15 @@ Khung dự án cho **công cụ desktop chạy local**: lõi Python + CLI + giao
 
 > Đây là template. Tạo dự án mới: xem [docs/TEMPLATE.md](docs/TEMPLATE.md).
 
+## Plugin Claude Code `lutech-tools`
+
+```bash
+./install.sh
+```
+
+Rồi trong Claude Code gõ `/lutech-tools:help`. Các lệnh: `new-tool`, `spec-feature`, `plan-feature`, `implement-tdd`,
+`review-change`, `ui-review`, `qa-check`, `release`, `help` — hướng dẫn theo từng loại tool ở [docs/PLUGIN.md](docs/PLUGIN.md).
+
 ## Dùng ngay (người dùng cuối)
 
 1. Tải file zip cho hệ điều hành của bạn ở mục **Releases**.
@@ -38,7 +47,9 @@ tests/             unit / web (API) / ui (Playwright)
 build/             PyInstaller spec + launcher (+ icon.ico / icon.icns)
 scripts/           new_project, bump_version, check_privacy
 docs/              LIFECYCLE, specs/, plans/, adr/, RELEASE
-.claude/           rule + skill + hook cho Claude Code
+skills/            skill của plugin lutech-tools (/lutech-tools:*)
+.claude-plugin/    manifest plugin + marketplace
+.claude/           rule + hook cho Claude Code
 .github/           CI test, release theo tag, template PR/issue
 ```
 

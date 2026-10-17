@@ -16,8 +16,8 @@ python scripts/bump_version.py patch               # tăng version + CHANGELOG
 (macOS/Linux: `.venv/bin/...`)
 
 ## Quy trình bắt buộc
-Theo [docs/LIFECYCLE.md](docs/LIFECYCLE.md). Ứng với từng giai đoạn dùng skill trong `.claude/skills/`:
-`spec-feature` → `plan-feature` → `implement-tdd` → `review-change` (+ `ui-review` nếu đổi UI) → `qa-check` → `release`.
+Theo [docs/LIFECYCLE.md](docs/LIFECYCLE.md). Ứng với từng giai đoạn dùng skill của plugin **lutech-tools** (`skills/`, cài bằng `./install.sh`, xem [docs/PLUGIN.md](docs/PLUGIN.md)):
+`/lutech-tools:new-tool` → `spec-feature` → `plan-feature` → `implement-tdd` → `review-change` (+ `ui-review` nếu đổi UI) → `qa-check` → `release`.
 Không bỏ giai đoạn khi người dùng chưa đồng ý bỏ.
 
 ## Rule

@@ -9,7 +9,7 @@ Không qua cổng thì không sang giai đoạn sau.
 
 | # | Giai đoạn | Artifact | Gate | Skill |
 |---|-----------|----------|------|-------|
-| 0 | Khởi tạo | repo từ template, `.privacy-blocklist` | `pytest -q` xanh trên repo mới | — (`scripts/new_project.py`) |
+| 0 | Khởi tạo | repo từ template, `.privacy-blocklist` | `pytest -q` xanh trên repo mới | `new-tool` |
 | 1 | Spec | `docs/specs/YYYY-MM-DD-<tên>.md` | Người dùng duyệt; không còn mục "Câu hỏi mở" | `spec-feature` |
 | 2 | Thiết kế | mục Kiến trúc trong spec, ADR nếu có quyết định khó đảo ngược | Mỗi quyết định lớn có ADR | `spec-feature` |
 | 3 | Plan | `docs/plans/YYYY-MM-DD-<tên>.md` | Mỗi task ≤ 1 commit, có test tương ứng | `plan-feature` |

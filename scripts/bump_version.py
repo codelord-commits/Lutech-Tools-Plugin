@@ -40,6 +40,11 @@ def main(arg: str) -> int:
     init = pkg_init()
     init.write_text(re.sub(r'__version__ = "[^"]+"', f'__version__ = "{new}"', init.read_text(encoding="utf-8")),
                     encoding="utf-8")
+    plugin = ROOT / ".claude-plugin" / "plugin.json"  # chỉ có ở repo gốc (plugin lutech-tools)
+    if plugin.exists():
+        plugin.write_text(re.sub(r'"version": "[^"]+"', f'"version": "{new}"', plugin.read_text(encoding="utf-8"),
+                                 count=1),
+                          encoding="utf-8")
     cl = ROOT / "CHANGELOG.md"
     body = cl.read_text(encoding="utf-8")
     entry = f"## [{new}] - {dt.date.today().isoformat()}"

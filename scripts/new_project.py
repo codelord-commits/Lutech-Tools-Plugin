@@ -22,7 +22,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 IGNORE = shutil.ignore_patterns(".git", ".venv", "venv", "__pycache__", ".pytest_cache", ".ruff_cache", "*.egg-info",
-                                "dist", "out", ".privacy-blocklist", "settings.local.json", "launch.json")
+                                "dist", "out", ".privacy-blocklist", "settings.local.json", "launch.json",
+                                # Phần plugin lutech-tools — chỉ sống ở repo gốc.
+                                ".claude-plugin", "skills", "install.sh", "PLUGIN.md")
 TEXT_EXT = {".py", ".md", ".toml", ".txt", ".json", ".yml", ".yaml", ".html", ".css", ".js", ".spec", ".cfg", ".ini",
             ".sh", ".gitignore", ".gitattributes", ""}
 

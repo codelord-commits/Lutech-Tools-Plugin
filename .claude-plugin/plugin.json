@@ -1,0 +1,8 @@
+{
+  "name": "lutech-tools",
+  "version": "0.1.0",
+  "description": "Bộ skill Lutech cho công cụ desktop local (Python + CLI + Web UI): tạo dự án, spec, plan, TDD, review, QA, release.",
+  "author": { "name": "Lutech" },
+  "license": "MIT",
+  "keywords": ["lutech", "python", "desktop", "tdd", "release", "workflow"]
+}

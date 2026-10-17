@@ -47,6 +47,6 @@ if ($hasCli) {
 
 Write-Host ""
 Write-Host "XONG! Tắt hẳn Claude rồi mở lại. Vào tab Code và gõ:" -ForegroundColor Green
-Write-Host "   /lutech-tools:lam-tool   rồi kể việc bạn muốn tự động hoá"
+Write-Host "   /lutech-tools:make-tool   rồi kể việc bạn muốn tự động hoá"
 Write-Host "   /lutech-tools:help       xem tất cả lệnh"
 Write-Host "Đừng xoá hay di chuyển thư mục này - plugin chạy từ đây."

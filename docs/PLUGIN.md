@@ -33,9 +33,9 @@ Kiểm tra: Quit Claude Desktop, mở lại, vào tab **Code**, gõ `/lutech-too
 
 | Lệnh | Giai đoạn | Làm gì | Đầu ra |
 |------|-----------|--------|--------|
-| `/lutech-tools:lam-tool` | 0→7 | **Cho non-tech**: kể việc bằng lời → Claude tự làm hết → tool chạy được | tool + file zip |
-| `/lutech-tools:sua-tool` | 8 | **Cho non-tech**: sửa lỗi / thêm tính năng bằng lời | tool đã cập nhật |
-| `/lutech-tools:dong-goi` | 6–7 | Đóng gói zip .exe/.app gửi đồng nghiệp, không cần GitHub | `dist/<App>-<os>.zip` |
+| `/lutech-tools:make-tool` | 0→7 | **Cho non-tech**: kể việc bằng lời → Claude tự làm hết → tool chạy được | tool + file zip |
+| `/lutech-tools:fix-tool` | 8 | **Cho non-tech**: sửa lỗi / thêm tính năng bằng lời | tool đã cập nhật |
+| `/lutech-tools:package-tool` | 6–7 | Đóng gói zip .exe/.app gửi đồng nghiệp, không cần GitHub | `dist/<App>-<os>.zip` |
 | `/lutech-tools:help` | — | Liệt kê lệnh, đoán giai đoạn hiện tại, gợi ý lệnh tiếp | — |
 | `/lutech-tools:new-tool` | 0 | Tạo dự án mới từ template, đổi tên, cài venv, chạy test | thư mục dự án + commit đầu |
 | `/lutech-tools:spec-feature` | 1–2 | Hỏi làm rõ, đề xuất hướng, viết spec + ADR | `docs/specs/…`, `docs/adr/…` |

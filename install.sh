@@ -24,7 +24,7 @@ if ! command -v claude >/dev/null 2>&1; then
   say "Cài cho Claude Desktop"
   if [ "${1:-}" = "--uninstall" ]; then "$PY" "$HERE/scripts/install_plugin.py" --uninstall
   else "$PY" "$HERE/scripts/install_plugin.py"; fi
-  echo "Tắt hẳn Claude rồi mở lại, vào tab Code và gõ /lutech-tools:lam-tool"
+  echo "Tắt hẳn Claude rồi mở lại, vào tab Code và gõ /lutech-tools:make-tool"
   exit 0
 fi
 
@@ -55,6 +55,6 @@ esac
 cat <<EOF
 
 ✓ Xong. Mở lại Claude Code rồi gõ:
-    /lutech-tools:lam-tool    rồi kể việc bạn muốn tự động hoá
+    /lutech-tools:make-tool    rồi kể việc bạn muốn tự động hoá
     /lutech-tools:help        xem tất cả lệnh
 EOF

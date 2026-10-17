@@ -21,16 +21,16 @@ Mở Claude Desktop → chuyển sang tab **Code** (không phải tab Chat — c
 
 | Bạn muốn | Gõ |
 |----------|----|
-| Làm tool mới | `/lutech-tools:lam-tool` + kể việc bạn đang làm |
-| Sửa lỗi, thêm tính năng | `/lutech-tools:sua-tool` + mô tả |
-| Có file gửi đồng nghiệp | `/lutech-tools:dong-goi` |
+| Làm tool mới | `/lutech-tools:make-tool` + kể việc bạn đang làm |
+| Sửa lỗi, thêm tính năng | `/lutech-tools:fix-tool` + mô tả |
+| Có file gửi đồng nghiệp | `/lutech-tools:package-tool` |
 
 Quên lệnh? Gõ `/lutech-tools:help`.
 
 ## Ví dụ một lần làm tool
 
 ```
-Bạn:    /lutech-tools:lam-tool mỗi ngày mình resize khoảng 50 ảnh creative ra
+Bạn:    /lutech-tools:make-tool mỗi ngày mình resize khoảng 50 ảnh creative ra
         1200x628, 1080x1080, 1080x1920 để up lên các network, làm tay mất 1 tiếng
 Claude: Mình hiểu là tool "Resize creative". Hỏi nhanh 3 câu:
         1. Ảnh lệch tỉ lệ thì: (1) thêm nền (2) cắt giữa  ← đề xuất 2
@@ -72,5 +72,5 @@ Việc khác cũng làm được — cứ kể: *đưa vào cái gì, muốn nh�
 | Gõ `/lutech-tools:` không thấy lệnh | Kiểm đang ở tab **Code**; tắt hẳn Claude (Quit) rồi mở lại |
 | Đang ở tab Chat | Chuyển sang tab **Code** — tab Chat không chạy được tool trên máy |
 | Windows báo "Windows protected your PC" khi mở tool | **More info** → **Run anyway** |
-| Tool chạy sai | `/lutech-tools:sua-tool` + mô tả + ảnh chụp màn hình |
+| Tool chạy sai | `/lutech-tools:fix-tool` + mô tả + ảnh chụp màn hình |
 | Muốn bản plugin mới nhất | Chạy lại `install.bat` |

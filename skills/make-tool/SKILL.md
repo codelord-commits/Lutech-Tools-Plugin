@@ -1,6 +1,6 @@
 ---
-name: lam-tool
-description: Lệnh chính cho người không biết code (UA, marketing, vận hành). Dùng khi người dùng mô tả bằng lời thường một việc lặp đi lặp lại muốn tự động hoá ("tôi muốn tool để resize creative", "làm tool đổi tên hàng loạt", "gộp report các network") hoặc gõ /lutech-tools:lam-tool. Tự lo toàn bộ phần kỹ thuật từ tạo dự án đến file .exe chạy được.
+name: make-tool
+description: Lệnh chính cho người không biết code (UA, marketing, vận hành). Dùng khi người dùng mô tả bằng lời thường một việc lặp đi lặp lại muốn tự động hoá ("tôi muốn tool để resize creative", "làm tool đổi tên hàng loạt", "gộp report các network") hoặc gõ /lutech-tools:make-tool. Tự lo toàn bộ phần kỹ thuật từ tạo dự án đến file .exe chạy được.
 ---
 
 # Làm tool cho người không biết code
@@ -48,7 +48,7 @@ Sửa hết lỗi mức Cao. Sau đó **mở tool cho người dùng dùng thử
 ## Bước 5/5 — Giao hàng
 - Đóng gói: `python scripts/build_exe.py` → báo đường dẫn file zip, dặn: "Gửi zip này cho đồng nghiệp, giải nén, mở <Tên>.exe".
 - Lưu lại (commit) với mô tả dễ hiểu. **Không** đưa lên GitHub khi chưa hỏi.
-- Kết thúc bằng: muốn thêm/sửa gì sau này chỉ cần gõ `/lutech-tools:sua-tool <mô tả>`.
+- Kết thúc bằng: muốn thêm/sửa gì sau này chỉ cần gõ `/lutech-tools:fix-tool <mô tả>`.
 
 Gặp lỗi kỹ thuật: tự xử lý; chỉ hỏi người dùng khi cần **quyết định nghiệp vụ** hoặc cần cài phần mềm (Python, Git) — khi đó
 đưa link tải và hướng dẫn từng bấm.

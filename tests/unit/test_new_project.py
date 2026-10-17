@@ -28,7 +28,7 @@ def test_new_project_skips_plugin_files(tmp_path):
 
 def test_non_tech_commands_documented():
     guide = (ROOT / "docs" / "HUONG-DAN.md").read_text(encoding="utf-8")
-    for cmd in ("lam-tool", "sua-tool", "dong-goi"):
+    for cmd in ("make-tool", "fix-tool", "package-tool"):
         assert (ROOT / "skills" / cmd / "SKILL.md").exists()
         assert f"/lutech-tools:{cmd}" in guide
 

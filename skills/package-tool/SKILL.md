@@ -1,6 +1,6 @@
 ---
-name: dong-goi
-description: Dùng khi người dùng muốn có file .exe/.app để gửi đồng nghiệp ("đóng gói", "xuất file exe", "gửi tool cho team") hoặc gõ /lutech-tools:dong-goi. Không cần GitHub.
+name: package-tool
+description: Dùng khi người dùng muốn có file .exe/.app để gửi đồng nghiệp ("đóng gói", "xuất file exe", "gửi tool cho team") hoặc gõ /lutech-tools:package-tool. Không cần GitHub.
 ---
 
 # Đóng gói tool để gửi đi

@@ -19,10 +19,16 @@ Hỏi (gộp một lượt), gợi ý theo [recipes.md](recipes.md) nếu khớp
 
 Khớp công thức trong `recipes.md` → đề xuất luôn: "Tool kiểu **Resize creative**: chọn thư mục → chọn kích thước → bấm Chạy → ra thư mục kết quả. Đúng ý không? (1) Đúng (2) Gần đúng, sửa: …".
 
+Loại tool: mặc định **App Windows/macOS** (file .exe/.app mở giao diện trong trình duyệt, chạy offline) — không cần hỏi.
+Người dùng chỉ cần chạy tự động → loại "Chỉ CLI" của `new-tool`. Người dùng muốn **web online dùng chung** hoặc **cửa sổ
+Windows riêng** → giải thích ngắn theo bảng "Tool làm ra trông như thế nào?" trong `docs/HUONG-DAN.md` rồi đề xuất app mặc định;
+web online thì khuyên báo team kỹ thuật.
+
 ## Bước 2/5 — Chốt bằng một "phiếu tool"
 Trình một khung ngắn, người dùng chỉ trả lời **Đồng ý / Sửa**:
 ```
 Tên tool:        Creative Resizer
+Loại:            App Windows (.exe) — mở giao diện trong trình duyệt, chạy offline
 Bạn làm:         chọn thư mục ảnh → tích kích thước → bấm Chạy
 Tool trả về:     thư mục Output/, mỗi ảnh × mỗi kích thước, tên <tên>_<rộng>x<cao>.png
 Xong khi:        50 ảnh chạy < 1 phút; ảnh lỗi được bỏ qua và liệt kê lại

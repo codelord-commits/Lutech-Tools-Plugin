@@ -27,6 +27,17 @@ Mở Claude Desktop → chuyển sang tab **Code** (không phải tab Chat — c
 
 Quên lệnh? Gõ `/lutech-tools:help`.
 
+## Tool làm ra trông như thế nào?
+
+| Loại | Trông như thế nào | Khi nào dùng | Làm được? |
+|------|-------------------|--------------|-----------|
+| **App Windows / macOS** (mặc định) | File `CreativeResizer.exe` (macOS: `.app`). Bấm đúp → **trình duyệt tự mở màn hình của tool** (nút Chọn thư mục, Chạy, thanh tiến độ). Đóng cửa sổ đen để thoát. | Hầu hết việc: xử lý ảnh, video, file Excel/CSV trên máy bạn | ✅ Có |
+| **Dòng lệnh** | Gõ lệnh trong cửa sổ đen, không có nút bấm | Team kỹ thuật muốn chạy tự động hằng ngày | ✅ Có — nói "chỉ cần dòng lệnh" |
+| **Web tool online** (một link cả team mở chung) | Website trên mạng, có đăng nhập | Cần dữ liệu chung cho nhiều người cùng lúc | ❌ Chưa — bộ này làm tool chạy trên từng máy. Cần thì báo team kỹ thuật |
+| **App cửa sổ Windows kiểu truyền thống** (không dùng trình duyệt) | Cửa sổ riêng như Word/Excel | — | ❌ Không cần — app mặc định đã có giao diện đầy đủ, chỉ hiển thị trong trình duyệt |
+
+Lưu ý: dù hiện trong trình duyệt, tool mặc định **chạy hoàn toàn trên máy bạn, không cần mạng**, file không gửi đi đâu.
+
 ## Ví dụ một lần làm tool
 
 ```
